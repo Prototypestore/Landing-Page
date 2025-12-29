@@ -1,11 +1,12 @@
 /* ===============================
-   SERVICES SECTION
+   VARIABLES + RESET
 ================================ */
 :root {
   --blue: #1e5bff;
   --black: #0a0a0a;
   --gray: #6b7280;
   --light: #f4f6fb;
+  --card-shadow: rgba(0, 0, 0, 0.12);
 }
 
 /* RESET + BASE */
@@ -19,6 +20,8 @@ body {
   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
   background: #ffffff;
   color: var(--black);
+  line-height: 1.6;
+  text-align: center; /* CENTER ALL TEXT */
 }
 
 /* ===============================
@@ -37,85 +40,53 @@ body {
    SERVICE CARD
 ================================ */
 #services-container > div {
-  background: #ffffff;
-  border: 1px solid var(--black);
+  background: var(--light);
   border-radius: 22px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  padding: 2rem 1rem 2.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
 }
 
 #services-container > div:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px var(--card-shadow);
+  border-color: var(--blue);
 }
 
 /* ===============================
-   CARD HEADER
+   CARD TITLE
 ================================ */
 #services-container > div > h3 {
-  margin: 0;
-  padding: 1.25rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--black);
-  height: 140px;
-
-  background:
-    /* subtle black wave lines */
-    url("data:image/svg+xml;utf8,
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 140'>
-      <path d='M0 32 Q40 12 80 32 T160 32 T240 32'
-        fill='none' stroke='%230a0a0a' stroke-width='1'/>
-      <path d='M0 64 Q40 44 80 64 T160 64 T240 64'
-        fill='none' stroke='%230a0a0a' stroke-width='1'/>
-      <path d='M0 96 Q40 76 80 96 T160 96 T240 96'
-        fill='none' stroke='%230a0a0a' stroke-width='1'/>
-    </svg>") bottom center / cover no-repeat,
-
-    /* dark blue */
-    linear-gradient(
-      180deg,
-      var(--blue) 0%,
-      var(--blue) 45%,
-      transparent 45%
-    ),
-
-    /* light blue */
-    linear-gradient(
-      180deg,
-      #7fc3f2 0%,
-      #7fc3f2 70%,
-      transparent 70%
-    ),
-
-    /* base white */
-    #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 1rem;
 }
 
 /* ===============================
    DESCRIPTION
 ================================ */
-#services-container > div > h3 + p {
-  margin: 0.5rem 1rem 0;
+#services-container > div > p:nth-of-type(1) {
   font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--gray);
-  flex-grow: 1;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 /* ===============================
    PRICE / FOOTER
 ================================ */
 #services-container > div > p:last-of-type {
-  margin-top: auto;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--black);
-  border-top: 1px solid var(--black);
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--blue);
 }
 
 /* ===============================
@@ -129,11 +100,10 @@ body {
   }
 
   #services-container > div > h3 {
-    height: auto;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  #services-container > div > h3 + p,
+  #services-container > div > p:nth-of-type(1),
   #services-container > div > p:last-of-type {
     font-size: 0.9rem;
   }
