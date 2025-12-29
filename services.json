@@ -1,0 +1,16 @@
+{
+  "services": [
+    { "id": 1, "title": "Digital Strategy Development", "price": 1500 },
+    { "id": 2, "title": "Search Engine Optimization (SEO)", "price": 1200 },
+    { "id": 3, "title": "Pay-Per-Click Advertising (PPC)", "price": 1000 },
+    { "id": 4, "title": "Social Media Marketing", "price": 900 },
+    { "id": 5, "title": "Content Marketing", "price": 800 },
+    { "id": 6, "title": "Email Marketing", "price": 700 },
+    { "id": 7, "title": "Conversion Rate Optimization (CRO)", "price": 1100 },
+    { "id": 8, "title": "Brand Development", "price": 1300 },
+    { "id": 9, "title": "Web Design & Development", "price": 2000 },
+    { "id": 10, "title": "Analytics & Reporting", "price": 600 },
+    { "id": 11, "title": "Influencer Marketing", "price": 950 },
+    { "id": 12, "title": "Online Reputation Management", "price": 850 }
+  ]
+}
