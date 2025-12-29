@@ -1,42 +1,54 @@
-/* services container layout */
+/* ===============================
+   SERVICES SECTION
+================================ */
+
+/* services container */
 #services-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-/* card */
+/* ===============================
+   SERVICE CARD
+   (intentionally distinct)
+================================ */
+
 #services-container > div {
-  width: 280px;
-  border: 1px solid #000;
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid var(--black);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* top half: title + waves */
+/* ===============================
+   CARD HEADER (TITLE + WAVES)
+================================ */
+
 #services-container > div > h3 {
   margin: 0;
-  padding: 20px;
+  padding: 1.25rem;
   height: 140px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
 
-  /* wave layers */
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--black);
+
   background:
-    /* thin black wavy strands */
+    /* thin black wave strands */
     url("data:image/svg+xml;utf8,
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 140'>
-      <path d='M0 30 Q40 10 80 30 T160 30 T240 30'
-        fill='none' stroke='black' stroke-width='1'/>
-      <path d='M0 65 Q40 45 80 65 T160 65 T240 65'
-        fill='none' stroke='black' stroke-width='1'/>
-      <path d='M0 100 Q40 80 80 100 T160 100 T240 100'
-        fill='none' stroke='black' stroke-width='1'/>
+      <path d='M0 32 Q40 12 80 32 T160 32 T240 32'
+        fill='none' stroke='%230a0a0a' stroke-width='1'/>
+      <path d='M0 64 Q40 44 80 64 T160 64 T240 64'
+        fill='none' stroke='%230a0a0a' stroke-width='1'/>
+      <path d='M0 96 Q40 76 80 96 T160 96 T240 96'
+        fill='none' stroke='%230a0a0a' stroke-width='1'/>
     </svg>") bottom center / cover no-repeat,
 
-    /* dark blue wave */
+    /* dark blue */
     linear-gradient(
       180deg,
       #0b3c5d 0%,
@@ -44,7 +56,7 @@
       transparent 45%
     ),
 
-    /* light blue wave */
+    /* light blue */
     linear-gradient(
       180deg,
       #7fc3f2 0%,
@@ -52,16 +64,33 @@
       transparent 70%
     ),
 
-    /* white base */
+    /* base */
     #ffffff;
 }
 
-/* bottom half: price */
-#services-container > div > p {
-  margin: 0;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: bold;
+/* ===============================
+   DESCRIPTION
+================================ */
+
+#services-container > div > h3 + p {
+  margin: 0.5rem 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+/* ===============================
+   PRICE
+================================ */
+
+#services-container > div > p:last-of-type {
+  margin-top: auto;
+  padding: 1rem;
   text-align: center;
-  border-top: 1px solid #000;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black);
+
+  border-top: 1px solid var(--black);
 }
