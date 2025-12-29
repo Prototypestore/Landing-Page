@@ -171,37 +171,37 @@ nav a {
 }
 
 /* ===============================
-   FOOTER / CONTACT (HYBRID)
+   FOOTER / CONTACT
 ================================ */
 
 .foot {
-  background: #f9fafb;                 /* light footer base */
+  background: #f9fafb;          /* light footer */
   padding: 3rem 3%;
   text-align: center;
   font-size: 0.9rem;
   color: #6b7280;
-  border-top: 1px solid #e5e7eb;       /* clean separation */
 }
 
-/* Heading text */
+/* Heading text (no blue bar) */
 .foot p {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #ffffff;
-  margin: 0 auto 1.6rem;
-  background: var(--blue);            /* blue strip feel */
-  padding: 1.2rem 1rem;
+  color: #111827;
+  margin: 0 0 1.6rem;
+  background: none;             /* REMOVE blue bar */
+  padding: 0;
 }
 
-/* Social icons */
+/* Social icon buttons ONLY */
 .foot img {
   width: 18px;
   height: 18px;
   margin: 0;
   padding: 1rem 1.4rem;
   opacity: 1;
-  background: var(--blue);            /* screenshot-style bar */
+  background: var(--blue);      /* blue only here */
   transition: background 0.2s ease;
+  background-clip: padding-box;
 }
 
 /* Social links */
@@ -215,14 +215,14 @@ nav a {
   font-weight: 500;
 }
 
-/* Divider lines between social items */
+/* Divider lines between social buttons */
 .foot a:not(:last-child) img {
   border-right: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 /* Hover effect */
 .foot img:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.15);
   transform: none;
 }
 
@@ -234,7 +234,7 @@ nav a {
 
 /* Contact links */
 .add a {
-  color: #111827;                     /* hybrid: dark text */
+  color: #111827;
   text-decoration: none;
   font-weight: 500;
 }
@@ -259,6 +259,7 @@ nav a {
   display: inline-flex;
   align-items: center;
 }
+
 
 /* ===============================
    RESPONSIVE
