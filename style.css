@@ -166,11 +166,55 @@ nav a {
 /* ===============================
    FOOTER / CONTACT
 ================================ */
+
 .foot {
-  padding: 4rem 6%;
+  background: linear-gradient(180deg, #1bb0e6, #0fa4dc);
+  padding: 2.5rem 3%;
   text-align: center;
 }
 
+/* Heading text */
+.foot p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+/* Social icons container behavior */
+.foot img {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 1rem 1.4rem;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease;
+}
+
+/* Make icons behave like buttons */
+.foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Divider lines between items */
+.foot a:not(:last-child) img {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Hover effect */
+.foot img:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: none;
+}
+
+/* Keep your original add block intact if used elsewhere */
 .add {
   background: var(--blue);
   color: #fff;
@@ -200,24 +244,6 @@ nav a {
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-}
-
-.foot p {
-  font-size: 0.85rem;
-  color: var(--gray);
-  margin: 1rem 0;
-}
-
-.foot img {
-  width: 26px;
-  margin: 0.5rem;
-  opacity: 0.85;
-  transition: 0.2s ease;
-}
-
-.foot img:hover {
-  opacity: 1;
-  transform: scale(1.1);
 }
 
 /* ===============================
