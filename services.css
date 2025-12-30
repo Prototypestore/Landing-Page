@@ -48,7 +48,7 @@ nav a {
   transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav a:not(.nav-contact):hover {
   color: var(--blue);
 }
 
@@ -68,9 +68,10 @@ nav a:hover {
   transition: 0.2s ease;
 }
 
-.nav-contact:hover {
-  color: #fff;              /* stays white */
-  background: var(--blue);  /* stays blue */
+.nav-contact:hover,
+.nav-contact:focus {
+  color: #fff;
+  background: var(--blue);
 }
 
 /* ===============================
