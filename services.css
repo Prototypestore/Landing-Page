@@ -68,11 +68,6 @@ nav a:hover {
   transition: 0.2s ease;
 }
 
-.nav-contact:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(30, 91, 255, 0.3);
-}
-
 /* ===============================
    SERVICES CONTAINER
 ================================ */
